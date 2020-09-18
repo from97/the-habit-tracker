@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Subject from './components/Subject';
 import './App.scss';
 
 class App extends Component {
