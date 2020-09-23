@@ -1,5 +1,11 @@
 $gradient: linear-gradient(180deg, rgba(255,246,118,1) 0%, rgba(230,251,118,1) 51%, rgba(190,255,118,1) 100%);
 
+@mixin layout() {
+    width: 64em;
+    max-width: calc(100% - 4em);
+    margin: 0 auto;
+}
+
 @mixin flex_column() {
     display: flex;
     flex-direction: column;
@@ -21,3 +27,4 @@ body {
     line-height: 1.65;
     height: 100vh;
 }
+
