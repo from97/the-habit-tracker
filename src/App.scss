@@ -28,3 +28,7 @@ body {
     height: 100vh;
 }
 
+.App {
+    @include layout();
+    @include flex_column();
+}
