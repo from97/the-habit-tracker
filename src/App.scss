@@ -4,3 +4,8 @@
     list-style: none;
     text-decoration: none;
 }
+
+body {
+    background: rgb(255,246,118);
+    background: #{$gradient};
+}
