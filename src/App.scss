@@ -66,6 +66,10 @@ body {
                     height: 2.25em;
                     line-height: 2.25em;
                     padding: 0 20px;
+                    border-radius: 8px;
+                    &:hover {
+                        background-color: rgba(222, 222, 222, 0.25);
+                    }
                 }
             }
         }
