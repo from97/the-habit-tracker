@@ -5,9 +5,9 @@ class NavBar extends Component {
       return (
         <nav>
             <ul>
-                <li><a href="/">wallpaper</a></li>
+                <li><a href="/">home</a></li>
                 <li><a href="/">habits</a></li>
-                <li><a href="/">static</a></li>
+                <li><a href="/">stats</a></li>
             </ul>
         </nav>
       );

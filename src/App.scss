@@ -83,6 +83,9 @@ body {
                     &:hover {
                         background-color: rgba(222, 222, 222, 0.25);
                     }
+                    &.active {
+                        background-color: #ffffff;
+                    }
                 }
             }
         }
