@@ -56,5 +56,6 @@ body {
         @include flex_column();
         padding: 1em;
         box-sizing: border-box;
+        border-radius: 0.25em 0.25em 0 0;
     }
 }
