@@ -59,6 +59,9 @@ body {
         background-color: #f7f7f7;
         ul {
             @include flex_column();
+            li {
+                margin: 0 0.35em;
+            }
         }
     }
 }
