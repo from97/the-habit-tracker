@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      subject: { title: 'The Habit Traker', sub: 'make good habits'}
+      subject: { title: 'The Habit Tracker', sub: 'make good habits'}
     }
   }
   render () {
