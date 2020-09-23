@@ -54,6 +54,7 @@ body {
     }
     nav {
         @include flex_column();
-        
+        padding: 1em;
+        box-sizing: border-box;
     }
 }
