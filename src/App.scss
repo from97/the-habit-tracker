@@ -52,4 +52,8 @@ body {
             letter-spacing: -0.025em;
         }
     }
+    nav {
+        @include flex_column();
+        
+    }
 }
