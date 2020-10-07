@@ -6,7 +6,7 @@ class HabitList extends Component {
         var habits = this.props.data;
         var i = 0;
         while (i < habits.length) {
-            list.push(<li key={habits[i]}>{habits[i]}<span>X</span></li>);
+            list.push(<li key={habits[i]}>{habits[i]}<span>x</span></li>);
             i++;
         }
         return (
