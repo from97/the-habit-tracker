@@ -3,6 +3,7 @@ import Title from './components/Title';
 import NavBar from './components/NavBar';
 import Content from './components/Content';
 import HomeContent from './components/HomeContent';
+import HabitList from './components/HabitList';
 import Info from './components/Info';
 import './App.scss';
 
