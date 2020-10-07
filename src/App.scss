@@ -120,6 +120,7 @@ body {
                 @include flex_row();
                 justify-content: space-between;
                 span {
+                    color: #aaa;
                     width: 25px;
                     height: 100%;
                     line-height: 30px;
@@ -129,6 +130,7 @@ body {
                 span:hover {
                     background-color: #aaa;
                     color: white;
+                    cursor: pointer;
                 }
             }
         }
