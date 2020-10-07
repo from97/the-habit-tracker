@@ -21,10 +21,10 @@ class Table extends Component {
             i++;
         }
 
-        
         return (
             <table>
-                <tr>Habits{dateList}</tr>
+                <th>Habits</th>
+                {dateList}
                 {habitList}
             </table>
         );

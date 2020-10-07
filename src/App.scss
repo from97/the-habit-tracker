@@ -95,13 +95,19 @@ body {
         @include flex_row();
         table {
             margin: 20px 0 20px 0;
-            border: 1px solid #aaa;
             border-collapse: collapse;
             td {
                 width: 22px;
+                border: 1px solid #aaa;
                 font-family: monospace;
                 font-weight: inherit;
                 box-sizing: border-box;
+                input[type='checkbox'] {
+                    outline: none;
+                }
+            }
+            tr {
+                border: 1px solid #aaa;
             }
         }
     }
