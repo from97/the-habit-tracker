@@ -111,8 +111,12 @@ body {
             }
         }
         ul {
+            margin: 50px 0;
             li {
+                width: 300px;
                 text-align: left;
+                @include flex_row();
+                justify-content: space-between;
             }
         }
     }
