@@ -75,6 +75,7 @@ body {
             li {
                 margin: 0 0.35em;
                 a {
+                    color: inherit;
                     display: inline-block;
                     height: 2.25em;
                     line-height: 2.25em;
@@ -82,6 +83,9 @@ body {
                     border-radius: 8px;
                     &:hover {
                         background-color: rgba(222, 222, 222, 0.25);
+                    }
+                    &:active {
+                        background-color: #ffffff;
                     }
                     &.active {
                         background-color: #ffffff;
