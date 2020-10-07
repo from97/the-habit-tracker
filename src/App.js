@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './App.scss';
 import Title from './components/Title';
 import NavBar from './components/NavBar';
 import HomeContent from './components/HomeContent';
 import Info from './components/Info';
-import './App.scss';
 import HabitsContent from './components/HabitsContent';
+import StatsContent from './components/StatsContent';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,9 @@ class App extends Component {
     }
     else if (this.state.mode === 'habits') {
       article = <HabitsContent data={this.state.habits}></HabitsContent>
+    }
+    else if (this.state.mode === 'stats') {
+      article = <StatsContent></StatsContent>
     }
     return article;
   }
