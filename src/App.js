@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Title from './components/Title';
 import NavBar from './components/NavBar';
 import HomeContent from './components/HomeContent';
-import HabitList from './components/HabitList';
 import Info from './components/Info';
 import './App.scss';
 
@@ -17,12 +16,11 @@ class App extends Component {
   }
 
   getContent() {
-    if (this.state.mode === 'home')
-      return (
-        <HomeContent>
-          <HabitList data={this.state.habits}></HabitList>
-        </HomeContent>
-      );
+    var article;
+    if (this.state.mode === 'home') {
+      article = <HomeContent data={this.state.habits}></HomeContent>
+    }
+    return article;
   }
 
   render () {
