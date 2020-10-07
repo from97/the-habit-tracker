@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import HomeContent from './components/HomeContent';
 import Info from './components/Info';
 import './App.scss';
+import HabitsContent from './components/HabitsContent';
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,9 @@ class App extends Component {
     var article;
     if (this.state.mode === 'home') {
       article = <HomeContent data={this.state.habits}></HomeContent>
+    }
+    else if (this.state.mode === 'habits') {
+      article = <HabitsContent data={this.state.habits}></HabitsContent>
     }
     return article;
   }
