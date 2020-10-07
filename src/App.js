@@ -27,7 +27,9 @@ class App extends Component {
     return (
       <div className="App">
         <Title title={this.state.subject.title}></Title>
-        <NavBar></NavBar>
+        <NavBar onChangeMode={function(_mode){
+          this.setState({mode: _mode});
+        }.bind(this)}></NavBar>
         {this.getContent()}
         <Info></Info>
       </div>
