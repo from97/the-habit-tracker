@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import HabitList from './HabitList';
+import Table from './Table';
 
 class HabitsContent extends Component {
     render() {
       return (
         <article>
-          <HabitList data={this.props.data}></HabitList>
+          <Table data={this.props.data}></Table>
         </article>
       );
     }

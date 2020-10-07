@@ -10,7 +10,7 @@ class HabitList extends Component {
             i++;
         }
         return (
-            <ul>
+            <ul className='habit_list'>
                 {list}
             </ul>
         );
