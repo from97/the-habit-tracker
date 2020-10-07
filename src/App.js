@@ -19,7 +19,7 @@ class App extends Component {
 
   getContent() {
     if (this.state.mode === 'home')
-      return (<HomeContent></HomeContent>);
+      return (<HomeContent data={this.state.habits}></HomeContent>);
   }
 
   render () {
