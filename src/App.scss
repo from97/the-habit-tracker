@@ -92,6 +92,7 @@ body {
     }
     article {
         background-color: #ffffff;
+        @include flex_row();
     }
     footer {
         padding: 4em 0 2em 0;
