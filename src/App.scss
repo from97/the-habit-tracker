@@ -97,15 +97,11 @@ body {
             margin: 20px 0 20px 0;
             border: 1px solid #aaa;
             border-collapse: collapse;
-            tr {
+            td {
                 width: 22px;
                 font-family: monospace;
                 font-weight: inherit;
                 box-sizing: border-box;
-                border: 1px solid #aaa;
-                &:nth-child(1) {
-                    width: 240px;
-                }
             }
         }
     }
