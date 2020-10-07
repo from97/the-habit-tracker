@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       subject: { title: 'The Habit Tracker', sub: 'make good habits'},
       mode: 'home',
-      habits: []
+      habits: ['1day 1commit', 'workout 30 minutes']
     }
   }
 
