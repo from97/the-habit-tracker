@@ -102,6 +102,10 @@ body {
         table {
             margin: 50px 0;
             border-collapse: collapse;
+            th {
+                border-top: white 1px solid;
+                border-left: white 1px solid;
+            }
             td {
                 width: 22px;
                 border: 1px solid #aaa;
