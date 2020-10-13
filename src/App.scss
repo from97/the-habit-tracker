@@ -161,13 +161,15 @@ div.habit_list {
     .add_content {
         width: 70%;
         margin: 30px 14px 0 0;
+        padding: 2px;
     }
     .add_content:focus {
         outline: #fff676 1px solid;
+        padding: 3px;
     }
     .add_button {
         color: #636363;
-        padding: 1px;
+        padding: 3px;
         cursor: pointer;
     }
 }
