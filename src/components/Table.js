@@ -19,7 +19,7 @@ class Table extends Component {
         i = 0;
         habitList.push(<tr key='date_list'><th>{table_name}</th>{dateList}</tr>);
         while (i < habits.length) {
-            habitList.push(<tr key={habits[i]}>{habits[i]}{tdList}</tr>);
+            habitList.push(<tr key={habits[i].id}>{habits[i].title}{tdList}</tr>);
             i++;
         }
 

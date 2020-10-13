@@ -7,8 +7,8 @@ class HabitList extends Component {
         var i = 0;
         while (i < habits.length) {
             list.push(
-                <li key={habits[i]}>
-                    {habits[i]}
+                <li key={habits[i].id}>
+                    {habits[i].title}
                     <span>
                         <span className='edit-button'>
                             <i class="far fa-edit"></i>
