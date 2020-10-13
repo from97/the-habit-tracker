@@ -27,12 +27,30 @@ class App extends Component {
       article = <HomeContent data={this.state.habits}></HomeContent>
     }
     else if (this.state.mode === 'habits') {
-      article = <HabitsContent data={this.state.habits} onSetList={function(new_habit){
-        this.max_content_id++;
-        var list = Array.from(this.state.habits);
-        list.push({id:this.max_content_id, title:new_habit});
-        this.setState({habits: list});
-      }.bind(this)}></HabitsContent>
+      article = 
+        <HabitsContent 
+          data={this.state.habits} 
+          onAddItem={function(new_habit){
+            this.max_content_id++;
+            var list = Array.from(this.state.habits);
+            list.push({id:this.max_content_id, title:new_habit});
+            this.setState({habits: list});
+          }.bind(this)}
+          onDeleteItem={function(selected_id){
+            var list = Array.from(this.state.habits);
+            console.log(list, selected_id);
+            var i = 0;
+            while (i < list.length) {
+              if (list[i].id === selected_id) {
+                list.splice(i, 1);
+                break ;
+              }
+              i++;
+            }
+            this.setState({habits: list});
+          }.bind(this)}
+        >
+        </HabitsContent>
     }
     else if (this.state.mode === 'stats') {
       article = <StatsContent></StatsContent>

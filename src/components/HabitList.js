@@ -11,9 +11,16 @@ class HabitList extends Component {
                     {habits[i].title}
                     <span>
                         <span className='edit-button'>
-                            <i class="far fa-edit"></i>
+                            <i className="far fa-edit"></i>
                         </span>
-                        <span className='delete-button'>x</span>
+                        <span
+                            data-id={habits[i].id}
+                            className='delete-button'
+                            onClick={function(e){
+                                var id = Number(e.target.dataset.id);
+                                this.props.onDeleteHabit(id);
+                            }.bind(this)}
+                        >x</span>
                     </span>
                 </li>);
             i++;
@@ -26,7 +33,7 @@ class HabitList extends Component {
                 <form action='/create_process' method='post'
                     onSubmit={function(e){
                         e.preventDefault();
-                        this.props.onChangeList(
+                        this.props.onAddHabit(
                             e.target.new_habit.value
                         );
                     }.bind(this)}
