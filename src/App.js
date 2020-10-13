@@ -10,10 +10,14 @@ import StatsContent from './components/StatsContent';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.max_content_id = 2;
     this.state = {
       subject: { title: 'The Habit Tracker', sub: 'make good habits'},
       mode: 'home',
-      habits: ['1day 1commit', 'workout 30 minutes']
+      habits: [
+        {id: 1, title: '1day 1commit'}, 
+        {id: 2, title: 'workout 30 minutes'}
+      ]
     }
   }
 
