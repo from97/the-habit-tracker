@@ -115,7 +115,6 @@ body {
             }
         }
         ul {
-            margin: 50px 0;
             li {
                 width: 300px;
                 height: 35px;
@@ -151,5 +150,14 @@ body {
     }
     footer {
         padding: 4em 0 2em 0;
+    }
+}
+
+div.habit_list {
+    margin: 50px 0;
+    text-align: left;
+    .add_content {
+        width: 70%;
+        margin: 30px 10px 0 0;
     }
 }

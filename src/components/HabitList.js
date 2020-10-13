@@ -19,9 +19,13 @@ class HabitList extends Component {
             i++;
         }
         return (
-            <ul className='habit_list'>
-                {list}
-            </ul>
+            <div className='habit_list'>
+                <ul>
+                    {list}
+                </ul>
+                <input className='add_content' type='textarea'></input>
+                <input className='add_button' type='button' value='add'></input>
+            </div>
         );
     }
 }
