@@ -10,12 +10,14 @@ class Table extends Component {
 
         var i = 1;
         while (i <= DAYS_IN_MONTH) {
-            tdList.push(<td><input type='checkbox'></input></td>);
-            dateList.push(<td>{i}</td>);
+            tdList.push(<td key={i}><input type='checkbox'></input></td>);
+            dateList.push(<td key={i}>{i}</td>);
             i++;
         }
 
+        var table_name = 'Habits';
         i = 0;
+        habitList.push(<tr key='date_list'><th>{table_name}</th>{dateList}</tr>);
         while (i < habits.length) {
             habitList.push(<tr key={habits[i]}>{habits[i]}{tdList}</tr>);
             i++;
@@ -23,9 +25,9 @@ class Table extends Component {
 
         return (
             <table>
-                <th>Habits</th>
-                {dateList}
+                <tbody>
                 {habitList}
+                </tbody>
             </table>
         );
     }

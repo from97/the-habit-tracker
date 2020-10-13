@@ -23,7 +23,11 @@ class App extends Component {
       article = <HomeContent data={this.state.habits}></HomeContent>
     }
     else if (this.state.mode === 'habits') {
-      article = <HabitsContent data={this.state.habits}></HabitsContent>
+      article = <HabitsContent data={this.state.habits} onSetList={function(new_habit){
+        var list = Array.from(this.state.habits);
+        list.push(new_habit);
+        this.setState({habits: list});
+      }.bind(this)}></HabitsContent>
     }
     else if (this.state.mode === 'stats') {
       article = <StatsContent></StatsContent>

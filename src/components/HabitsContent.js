@@ -5,7 +5,9 @@ class HabitsContent extends Component {
     render() {
       return (
         <article>
-          <HabitList data={this.props.data}></HabitList>
+          <HabitList data={this.props.data} onChangeList={function(new_habit){
+            this.props.onSetList(new_habit);
+          }.bind(this)}></HabitList>
         </article>
       );
     }

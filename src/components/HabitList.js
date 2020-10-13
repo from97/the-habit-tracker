@@ -23,8 +23,17 @@ class HabitList extends Component {
                 <ul>
                     {list}
                 </ul>
-                <input className='add_content' type='textarea'></input>
-                <input className='add_button' type='button' value='add'></input>
+                <form action='/create_process' method='post'
+                    onSubmit={function(e){
+                        e.preventDefault();
+                        this.props.onChangeList(
+                            e.target.new_habit.value
+                        );
+                    }.bind(this)}
+                >
+                    <input type='text' name='new_habit' className='add_content'></input>
+                    <input type='submit' className='add_button' value='add'></input>
+                </form>
             </div>
         );
     }
