@@ -15,7 +15,7 @@ class App extends Component {
       subject: { title: 'The Habit Tracker', sub: 'make good habits'},
       mode: 'home',
       habits: [
-        {id: 1, title: '1day 1commit'}, 
+        {id: 1, title: '1 day 1 commit'}, 
         {id: 2, title: 'workout 30 minutes'}
       ]
     }

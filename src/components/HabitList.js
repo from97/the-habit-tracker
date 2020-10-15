@@ -10,7 +10,14 @@ class HabitList extends Component {
                 <li key={habits[i].id}>
                     {habits[i].title}
                     <span>
-                        <span className='edit-button'>
+                        <span 
+                            data-id={habits[i].id}
+                            className='edit-button'
+                            onClick={function(e){
+                                var id = Number(e.target.dataset.id);
+                                this.props.onEditHabit(id);
+                            }.bind(this)}
+                        >
                             <i className="far fa-edit"></i>
                         </span>
                         <span
