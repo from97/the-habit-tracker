@@ -49,6 +49,20 @@ class App extends Component {
             }
             this.setState({habits: list});
           }.bind(this)}
+          onEditItem={function(selected_id){
+            var list = Array.from(this.state.habits);
+            var text_area = document.querySelector('.add_content');
+            var add_button = document.querySelector('.add_button');
+            var i = 0;
+            while (i < list.length) {
+              if (list[i].id === selected_id) {
+                console.log(list[i].title);
+                text_area.value = list[i].title;
+                add_button.value = 'save';
+              }
+              i++;
+            }
+          }.bind(this)}
         >
         </HabitsContent>
     }
