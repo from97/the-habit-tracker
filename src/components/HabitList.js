@@ -10,15 +10,15 @@ class HabitList extends Component {
                 <li key={habits[i].id}>
                     {habits[i].title}
                     <span>
-                        <span 
-                            data-id={habits[i].id}
-                            className='edit-button'
-                            onClick={function(e){
-                                var id = Number(e.target.dataset.id);
-                                this.props.onEditHabit(id);
-                            }.bind(this)}
-                        >
-                            <i className="far fa-edit"></i>
+                        <span className='edit-button'>
+                            <i 
+                                className="far fa-edit"
+                                data-id={habits[i].id}
+                                onClick={function(e){
+                                    var id = Number(e.target.dataset.id);
+                                    this.props.onEditHabit(id);
+                                }.bind(this)}
+                            ></i>
                         </span>
                         <span
                             data-id={habits[i].id}
