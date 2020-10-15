@@ -38,6 +38,13 @@ class HabitList extends Component {
                 <ul>
                     {list}
                 </ul>
+                
+            </div>
+        );
+    }
+}
+
+/*
                 <form action='/create_process' method='post'
                     onSubmit={function(e){
                         e.preventDefault();
@@ -54,10 +61,7 @@ class HabitList extends Component {
                 >
                     <input type='text' name='new_habit' className='add_content'></input>
                     <input type='submit' name='add_or_save' className='add_button' value='add'></input>
-                </form>
-            </div>
-        );
-    }
-}
+                </form> 
+*/
 
 export default HabitList;
