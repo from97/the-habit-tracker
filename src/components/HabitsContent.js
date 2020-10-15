@@ -3,6 +3,12 @@ import HabitList from './HabitList';
 import Controls from './Controls';
 
 class HabitsContent extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        mode: 'add',
+      }
+    }
     render() {
       return (
         <article>
@@ -16,10 +22,11 @@ class HabitsContent extends Component {
             }.bind(this)}
             onEditHabit={function(selected_id){
               this.props.onEditItem(selected_id);
+              this.setState({mode: 'edit'});
             }.bind(this)}
           >
           </HabitList>
-          <Controls></Controls>
+          <Controls mode={this.state.mode}></Controls>
         </article>
       );
     }
