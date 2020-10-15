@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HabitList from './HabitList';
+import Controls from './Controls';
 
 class HabitsContent extends Component {
     render() {
@@ -18,6 +19,7 @@ class HabitsContent extends Component {
             }.bind(this)}
           >
           </HabitList>
+          <Controls></Controls>
         </article>
       );
     }

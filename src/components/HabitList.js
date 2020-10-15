@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Controls from './Controls';
 
 class HabitList extends Component {
     render() {
@@ -38,7 +39,6 @@ class HabitList extends Component {
                 <ul>
                     {list}
                 </ul>
-                
             </div>
         );
     }

@@ -4,14 +4,13 @@ class Controls extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mode: 'add',
-            id: this.props.data.id,
-            title: this.props.data.title
+            mode: 'add'
         }
     }
     getControls() {
         var control_content = 
             <input type='text' name='new_habit' className='add_content'></input>
+        var control_button;
         if (this.state.mode === 'add') {
             control_button = 
                 <input type='submit' name='add' className='add_button' value='add'></input>
@@ -20,7 +19,7 @@ class Controls extends Component {
             control_button = 
                 <input type='submit' name='save' className='add_button' value='save'></input>
         }
-        controls = 
+        var controls = 
             <form>
                 {control_content}
                 {control_button}
