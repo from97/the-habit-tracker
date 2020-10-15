@@ -12,11 +12,11 @@ class Controls extends Component {
         var control_button;
         if (this.props.mode === 'add') {
             control_button = 
-                <input type='submit' name='button' className='add_button' value='add'></input>
+                <input type='submit' name='button' className='save_button' value='add'></input>
         }
         else if (this.props.mode === 'edit') {
             control_button = 
-                <input type='submit' name='button' className='add_button' value='save'></input>
+                <input type='submit' name='button' className='save_button' value='save'></input>
         }
         var controls = 
             <form action='/create_process' method='post'
@@ -33,6 +33,7 @@ class Controls extends Component {
         return (
             <div className='controls'>
                 <h3>{this.props.mode}</h3>
+                <span></span>
                 {this.getControls()}
             </div>
         );

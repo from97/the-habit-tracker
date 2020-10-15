@@ -171,7 +171,7 @@ body {
             padding: 3px;
         }
     }
-    .add_button {
+    .save_button {
         color: #636363;
         padding: 3px;
         margin-left: 15px;
@@ -181,19 +181,4 @@ body {
 
 div.habit_list {
     margin: 50px 0;
-    text-align: left;
-    .add_content {
-        width: 70%;
-        margin: 30px 14px 0 0;
-        padding: 2px;
-    }
-    .add_content:focus {
-        outline: #fff676 1px solid;
-        padding: 3px;
-    }
-    .add_button {
-        color: #636363;
-        padding: 3px;
-        cursor: pointer;
-    }
 }
