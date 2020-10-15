@@ -22,7 +22,6 @@ class Controls extends Component {
         }
         controls = 
             <form>
-                <h3>{this.state.mode}</h3>
                 {control_content}
                 {control_button}
             </form>
@@ -31,6 +30,7 @@ class Controls extends Component {
     render() {
         return (
             <div className='controls'>
+                <h3>{this.state.mode}</h3>
                 {this.getControls()}
             </div>
         );
