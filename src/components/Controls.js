@@ -4,7 +4,7 @@ class Controls extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mode: 'create',
+            mode: 'add',
             id: this.props.data.id,
             title: this.props.data.title
         }
@@ -12,16 +12,17 @@ class Controls extends Component {
     getControls() {
         var control_content = 
             <input type='text' name='new_habit' className='add_content'></input>
-        if (this.state.mode === 'create') {
+        if (this.state.mode === 'add') {
             control_button = 
                 <input type='submit' name='add' className='add_button' value='add'></input>
         }
-        else if (this.state.mode === 'update') {
+        else if (this.state.mode === 'edit') {
             control_button = 
                 <input type='submit' name='save' className='add_button' value='save'></input>
         }
         controls = 
             <form>
+                <h3>{this.state.mode}</h3>
                 {control_content}
                 {control_button}
             </form>
