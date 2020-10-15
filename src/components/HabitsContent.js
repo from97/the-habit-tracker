@@ -13,6 +13,9 @@ class HabitsContent extends Component {
             onDeleteHabit={function(selected_id){
               this.props.onDeleteItem(selected_id);
             }.bind(this)}
+            onEditHabit={function(selected_id){
+              this.props.onEditItem(selected_id);
+            }.bind(this)}
           >
           </HabitList>
         </article>
