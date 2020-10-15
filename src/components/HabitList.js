@@ -41,13 +41,19 @@ class HabitList extends Component {
                 <form action='/create_process' method='post'
                     onSubmit={function(e){
                         e.preventDefault();
-                        this.props.onAddHabit(
-                            e.target.new_habit.value
-                        );
+                        var button = e.target.add_or_save.value;
+                        if (button === 'add') {
+                            this.props.onAddHabit(
+                                e.target.new_habit.value
+                            );
+                        }
+                        else if (button === 'save') {
+                            console.log(e.target.new_habit.value);
+                        }
                     }.bind(this)}
                 >
                     <input type='text' name='new_habit' className='add_content'></input>
-                    <input type='submit' className='add_button' value='add'></input>
+                    <input type='submit' name='add_or_save' className='add_button' value='add'></input>
                 </form>
             </div>
         );
