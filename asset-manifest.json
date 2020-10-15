@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/the-habit-tracker/static/css/main.6a7e198b.chunk.css",
-    "main.js": "/the-habit-tracker/static/js/main.7431f069.chunk.js",
-    "main.js.map": "/the-habit-tracker/static/js/main.7431f069.chunk.js.map",
+    "main.css": "/the-habit-tracker/static/css/main.536212b1.chunk.css",
+    "main.js": "/the-habit-tracker/static/js/main.6f0ec3a1.chunk.js",
+    "main.js.map": "/the-habit-tracker/static/js/main.6f0ec3a1.chunk.js.map",
     "runtime-main.js": "/the-habit-tracker/static/js/runtime-main.5648abc0.js",
     "runtime-main.js.map": "/the-habit-tracker/static/js/runtime-main.5648abc0.js.map",
     "static/js/2.9ef09162.chunk.js": "/the-habit-tracker/static/js/2.9ef09162.chunk.js",
     "static/js/2.9ef09162.chunk.js.map": "/the-habit-tracker/static/js/2.9ef09162.chunk.js.map",
     "index.html": "/the-habit-tracker/index.html",
-    "precache-manifest.5b7749a37213bf0f492ca98f42c91b36.js": "/the-habit-tracker/precache-manifest.5b7749a37213bf0f492ca98f42c91b36.js",
+    "precache-manifest.348d387bab1c17decbe247a10b9e8f78.js": "/the-habit-tracker/precache-manifest.348d387bab1c17decbe247a10b9e8f78.js",
     "service-worker.js": "/the-habit-tracker/service-worker.js",
-    "static/css/main.6a7e198b.chunk.css.map": "/the-habit-tracker/static/css/main.6a7e198b.chunk.css.map",
+    "static/css/main.536212b1.chunk.css.map": "/the-habit-tracker/static/css/main.536212b1.chunk.css.map",
     "static/js/2.9ef09162.chunk.js.LICENSE.txt": "/the-habit-tracker/static/js/2.9ef09162.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5648abc0.js",
     "static/js/2.9ef09162.chunk.js",
-    "static/css/main.6a7e198b.chunk.css",
-    "static/js/main.7431f069.chunk.js"
+    "static/css/main.536212b1.chunk.css",
+    "static/js/main.6f0ec3a1.chunk.js"
   ]
 }
