@@ -7,21 +7,25 @@ class Controls extends Component {
             isOpen: false
         }
     }
-    getControls() {
+    getControls(mode) {
         var control_content = 
             <input type='text' name='new_habit' className='add_content'></input>
         var control_button;
-        if (this.props.mode === 'add') {
+        if (mode === 'add') {
+            control_content = 
+                <input type='text' name='new_habit' className='add_content'></input>
             control_button = 
-                <input type='submit' name='button' className='save_button' value='add'></input>
+                <input type='submit' name='button' className='save_button' value='save'></input>
         }
-        else if (this.props.mode === 'edit') {
+        else if (mode === 'edit') {
+            control_content = 
+                <input type='text' name='new_habit' className='edit_content'></input>
             control_button = 
                 <input type='submit' name='button' className='save_button' value='save'></input>
         }
         var controls = 
             <div>
-                <h3 className="control_head">{this.props.mode}</h3>
+                <h3 className="control_head">{mode}</h3>
                 <form action='/create_process' method='post'
                     onSubmit={function(e){
                         e.preventDefault();
@@ -36,10 +40,22 @@ class Controls extends Component {
     render() {
         return (
             <div className='controls'>
-                <p 
-                    className='add_button' 
+                <p
+                    className='add_button'
+                    onClick={function(e){
+                        var add_button = e.target;
+                        if (this.state.isOpen) {
+                            add_button.innerHTML = '+';
+                            this.setState({isOpen : false});
+                        }
+                        else {
+                            add_button.innerHTML = '-';
+                            this.setState({isOpen : true});
+                        }
+                    }.bind(this)} 
                 >+</p>
-                { this.state.isOpen && this.getControls() }
+                { this.state.isOpen && this.getControls('add') }
+                { this.getControls('edit') }
             </div>
         );
     }
