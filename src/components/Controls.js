@@ -36,8 +36,14 @@ class Controls extends Component {
     render() {
         return (
             <div className='controls'>
-                <p 
-                    className='add_button' 
+                <p
+                    className='add_button'
+                    onClick={function(){
+                        if (this.state.isOpen)
+                            this.setState({isOpen : false});
+                        else
+                        this.setState({isOpen : true});
+                    }.bind(this)} 
                 >+</p>
                 { this.state.isOpen && this.getControls() }
             </div>
