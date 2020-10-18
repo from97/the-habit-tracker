@@ -4,6 +4,7 @@ class Controls extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isOpen: false
         }
     }
     getControls() {
@@ -19,22 +20,26 @@ class Controls extends Component {
                 <input type='submit' name='button' className='save_button' value='save'></input>
         }
         var controls = 
-            <form action='/create_process' method='post'
-                onSubmit={function(e){
-                    e.preventDefault();
-                }.bind(this)}
-            >
-                {control_content}
-                {control_button}
-            </form>
+            <div>
+                <h3 className="control_head">{this.props.mode}</h3>
+                <form action='/create_process' method='post'
+                    onSubmit={function(e){
+                        e.preventDefault();
+                    }.bind(this)}
+                >
+                    {control_content}
+                    {control_button}
+                </form>
+            </div>
         return (controls);
     }
     render() {
         return (
             <div className='controls'>
-                <h3>{this.props.mode}</h3>
-                <span></span>
-                {this.getControls()}
+                <p 
+                    className='add_button' 
+                >+</p>
+                { this.state.isOpen && this.getControls() }
             </div>
         );
     }

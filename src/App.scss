@@ -113,6 +113,7 @@ body {
                 font-family: monospace;
                 font-weight: inherit;
                 box-sizing: border-box;
+                text-align: center;
                 input[type='checkbox'] {
                     outline: none;
                 }
@@ -163,6 +164,13 @@ body {
 .controls {
     width: 300px;
     margin-bottom: 50px;
+    .add_button {
+        display: inline-block;
+        color: #aaa;
+        cursor: pointer;
+        font-size: 2em;
+        line-height: 1.0em;
+    }
     .add_content {
         width: 70%;
         padding: 2px;
