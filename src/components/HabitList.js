@@ -17,7 +17,6 @@ class HabitList extends Component {
                                 data-id={habits[i].id}
                                 onClick={function(e){
                                     var id = Number(e.target.dataset.id);
-                                    console.log(id);
                                     this.props.onEditHabit(id);
                                 }.bind(this)}
                             ></i>
