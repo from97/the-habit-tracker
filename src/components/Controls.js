@@ -14,7 +14,7 @@ class Controls extends Component {
             control_content = 
                 <input type='text' name='new_habit' className='add_content'></input>
             control_button = 
-                <input type='submit' name='button' className='save_button' value='save'></input>
+                <input type='submit' name='button' className='save_button' value='add'></input>
         }
         else if (mode === 'edit') {
             control_content = 
