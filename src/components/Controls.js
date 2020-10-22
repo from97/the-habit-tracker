@@ -14,7 +14,7 @@ class Controls extends Component {
             control_content = 
                 <input type='text' name='add_habit' className='add_content'></input>
             control_button = 
-                <input type='submit' name='button' className='save_button' value='add'></input>
+                <input type='submit' name='button' className='add_button' value='add'></input>
         }
         else if (mode === 'edit') {
             control_content = 
@@ -40,7 +40,7 @@ class Controls extends Component {
         return (
             <div className='controls'>
                 <p
-                    className='add_button'
+                    className='show_add_content'
                     onClick={function(e){
                         var add_button = e.target;
                         if (this.state.isOpen) {
