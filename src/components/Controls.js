@@ -42,7 +42,6 @@ class Controls extends Component {
             <div className='controls'>
                 <p
                     className='add_button'
-<<<<<<< HEAD
                     onClick={function(e){
                         var add_button = e.target;
                         if (this.state.isOpen) {
@@ -53,13 +52,6 @@ class Controls extends Component {
                             add_button.innerHTML = '-';
                             this.setState({isOpen : true});
                         }
-=======
-                    onClick={function(){
-                        if (this.state.isOpen)
-                            this.setState({isOpen : false});
-                        else
-                        this.setState({isOpen : true});
->>>>>>> 544f4795d2f63fc14c241d492fae9ee0bd059875
                     }.bind(this)} 
                 >+</p>
                 { this.state.isOpen && this.getControls('add') }
