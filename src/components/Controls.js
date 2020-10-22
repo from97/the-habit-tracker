@@ -28,6 +28,13 @@ class Controls extends Component {
                 <form action='/create_process' method='post'
                     onSubmit={function(e){
                         e.preventDefault();
+                        var mode = e.target.button.value;
+                        var habit;
+                        if (mode === 'add') 
+                            habit = e.target.add_habit.value;
+                        else
+                            habit = e.target.edit_habit.value;
+                        this.props.onChangeList(mode, habit);
                     }.bind(this)}
                 >
                     {control_content}
