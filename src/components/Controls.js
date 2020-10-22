@@ -8,8 +8,7 @@ class Controls extends Component {
         }
     }
     getControls(mode) {
-        var control_content = 
-            <input type='text' name='new_habit' className='add_content'></input>
+        var control_content;
         var control_button;
         if (mode === 'add') {
             control_content = 
