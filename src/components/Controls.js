@@ -12,13 +12,13 @@ class Controls extends Component {
         var control_button;
         if (mode === 'add') {
             control_content = 
-                <input type='text' name='new_habit' className='add_content'></input>
+                <input type='text' name='add_habit' className='add_content'></input>
             control_button = 
                 <input type='submit' name='button' className='save_button' value='add'></input>
         }
         else if (mode === 'edit') {
             control_content = 
-                <input type='text' name='new_habit' className='edit_content'></input>
+                <input type='text' name='edit_habit' className='edit_content'></input>
             control_button = 
                 <input type='submit' name='button' className='save_button' value='save'></input>
         }
