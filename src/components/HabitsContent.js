@@ -19,7 +19,7 @@ class HabitsContent extends Component {
             }.bind(this)}
           >
           </HabitList>
-          <Controls mode={this.state.mode}></Controls>
+          <Controls></Controls>
         </article>
       );
     }
