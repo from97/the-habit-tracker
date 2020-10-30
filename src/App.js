@@ -60,6 +60,17 @@ class App extends Component {
               i++;
             }
           }.bind(this)}
+          onSaveItem={function(selected_id, habit) {
+            var list = Array.from(this.state.habits);
+            var i = 0;
+            while (i < list.length) {
+              if (list[i].id === selected_id) {
+                list[i].title = habit;
+              }
+              i++;
+            }
+            this.setState({habits: list});
+          }.bind(this)}
         >
         </HabitsContent>
     }

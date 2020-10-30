@@ -4,7 +4,8 @@ class Controls extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
+            isAddOpen: false,
+            isEditOpen: true
         }
     }
     getControls(mode) {
@@ -50,18 +51,18 @@ class Controls extends Component {
                     className='show_add_content'
                     onClick={function(e){
                         var add_button = e.target;
-                        if (this.state.isOpen) {
+                        if (this.state.isAddOpen) {
                             add_button.innerHTML = '+';
-                            this.setState({isOpen : false});
+                            this.setState({isAddOpen : false});
                         }
                         else {
                             add_button.innerHTML = '-';
-                            this.setState({isOpen : true});
+                            this.setState({isAddOpen : true});
                         }
                     }.bind(this)} 
                 >+</p>
-                { this.state.isOpen && this.getControls('add') }
-                { this.getControls('edit') }
+                { this.state.isAddOpen && this.getControls('add') }
+                { this.state.isEditOpen && this.getControls('edit') }
             </div>
         );
     }

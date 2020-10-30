@@ -5,7 +5,9 @@ import Controls from './Controls';
 class HabitsContent extends Component {
     constructor(props) {
       super(props);
-      this.selected_id = 0;
+      this.state = {
+        data: {}
+      }
     }
     render() {
       return (
@@ -17,18 +19,25 @@ class HabitsContent extends Component {
             }.bind(this)}
             onEditHabit={function(selected_id){
               this.props.onEditItem(selected_id);
-              this.selected_id = selected_id;
+              var i = 0;
+              var list = this.props.data;
+              while (i < list.length) {
+                if (list[i].id === selected_id)
+                  break;
+                i++;
+              }
+              this.setState({data: list[i]});
             }.bind(this)}
           >
           </HabitList>
-          <Controls 
-            selected_id={this.selected_id}
+          <Controls
+            data={this.state.data}
+            data_title={this.state.title}
             onChangeList={function(mode, habit){
-              if (mode === 'add') {
-                
-              }
+              if (mode === 'add')
+                this.props.onAddItem(habit);
               else {
-
+                this.props.onSaveItem(this.selected_id, habit);
               }
             }.bind(this)}
           ></Controls>
