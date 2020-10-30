@@ -49,17 +49,6 @@ class App extends Component {
             }
             this.setState({habits: list});
           }.bind(this)}
-          onEditItem={function(selected_id){
-            var list = Array.from(this.state.habits);
-            var text_area = document.querySelector('.edit_content');
-            var i = 0;
-            while (i < list.length) {
-              if (list[i].id === selected_id) {
-                text_area.value = list[i].title;
-              }
-              i++;
-            }
-          }.bind(this)}
           onSaveItem={function(selected_id, habit) {
             var list = Array.from(this.state.habits);
             var i = 0;
